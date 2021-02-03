@@ -16,7 +16,6 @@ while my_number != comp_guess:
     if my_number == comp_guess:
         print()
         print(f'you guessed my number {my_number} correctly whoop whoop :)')
-        print(f'it only took you {tries} tries!')
     else:
         print(f'unfortunately {comp_guess} was wrong:(')
         if comp_guess < my_number:
@@ -27,6 +26,7 @@ while my_number != comp_guess:
             y = comp_guess - 1
     tries += 1
     try_list.append(tries)
+print(f'it only took you {tries} tries!')
 plt.scatter(try_list, guessed_numbers)
 plt.xlabel('tries')
 plt.ylabel('guessed number')
